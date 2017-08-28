@@ -7,9 +7,34 @@
 	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-	<header class="clearfix">
-		<h1 class="headline font-lightgrey"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</h1>
-		<span class="auto-updater font-bg-color bg-lightgrey"><span class="red-impuls-circle"></span>Live</span>
+	<header>
+
+		<div class="clearfix">
+			<h1 class="headline font-lightgrey"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</h1>
+
+			<div class="right-section">
+				<span class="auto-updater font-bg-color bg-lightgrey" title="Live-Feed deaktivieren"><span class="red-impuls-circle"></span>Live</span>
+				<span class="settings font-bg-color bg-lightgrey own-icon" title="Einstellungen"><i class="fa fa-sliders" aria-hidden="true"></i></span>
+			</div>
+		</div>
+
+		<div class="settings-box collapsed" style="display: none;">
+			<h2 class="font-lightgrey">Einstellungen</h2>
+
+			<form id="settings-form" method="post">
+
+				<div class="settings-row">
+					<input type="checkbox" name="exact_units" id="exact_units">
+					<label class="font-lightgrey" for="exact_units">genaue Einheiten verwenden</label>
+				</div>
+				<div class="settings-row">
+					<a class="font-bg-color bg-lightgrey" title="Einstellungen speichern" id="save-settings">übernehmen</a>
+				</div>
+
+			</form>
+
+		</div>
+
 	</header>
 	<main>
 
@@ -17,6 +42,7 @@
 			<div class="col col-half bg-lightgrey box first-in-row">
 				<h2 class="box-headline">RAM-Auslastung</h2>
 				<div class="percent-diagramm orange">
+					<span class="diagramm-middle"></span>
 					<span class="diagramm-part red" id="used_mem_in_percent_diagramm" style="width: 0%;"></span>
 				</div>
 				<p><span id="used_memory">0</span> GiB / <span id="total_memory">0</span> GiB belegt (<span id="used_mem_in_percent">0</span>%)</p>
@@ -37,6 +63,7 @@
 
 	<footer>
 		<p class="font-lightgrey center">Node.js von <strong>Lorenz Hohmann</strong></p>
+		<p class="font-lightgrey center">This project is available on <a href="https://github.com/lonz706/pc-dashboard" target="_blank">GitHub.com</a></p>
 	</footer>
 
 	<script src="/socket.io/socket.io.js"></script>

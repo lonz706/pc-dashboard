@@ -57,3 +57,7 @@ io.on('connection', function(socket) {
 app.get('/', function(req, res) {
 	res.render('index');
 });
+
+app.post('/submit-settings', function(req, res) {
+	console.log(req.query);
+});
