@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Server Dashboard | Live</title>
+
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<header class="clearfix">
+		<h1 class="headline font-lightgrey"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</h1>
+		<span class="auto-updater font-bg-color bg-lightgrey"><span class="red-impuls-circle"></span>Live</span>
+	</header>
+	<main>
+
+		<div class="container">
+			<div class="col col-half bg-lightgrey box first-in-row">
+				<h2 class="box-headline">RAM-Auslastung</h2>
+				<div class="percent-diagramm orange">
+					<span class="diagramm-part red" id="used_mem_in_percent_diagramm" style="width: 0%;"></span>
+				</div>
+				<p><span id="used_memory">0</span> GiB / <span id="total_memory">0</span> GiB belegt (<span id="used_mem_in_percent">0</span>%)</p>
+			</div>
+			<div class="col col-half bg-lightgrey box last-in-row">
+				<h2 class="box-headline">Speicherverbrauch</h2>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="col col-full bg-lightgrey box first-in-row last-in-row">
+				<h2 class="box-headline">Systeminformationen</h2>
+
+			</div>
+		</div>
+
+	</main>
+
+	<footer>
+		<p class="font-lightgrey center">Node.js von <strong>Lorenz Hohmann</strong></p>
+	</footer>
+
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

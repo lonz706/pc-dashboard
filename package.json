@@ -1,0 +1,21 @@
+{
+  "name": "server-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "http": "0.0.0",
+    "nodemon": "^1.11.0",
+    "os": "^0.1.1",
+    "path": "^0.12.7",
+    "socket.io": "^2.0.3"
+  }
+}
